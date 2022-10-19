@@ -33,6 +33,8 @@ services:
       - sonarqube-data:/opt/sonarqube/data
       - sonarqube-extensions:/opt/sonarqube/extensions
       - sonarqube-bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+    extra_hosts:
+      - github.com:140.82.121.3
   nexus:
     image: sonatype/nexus3:3.30.0
     container_name: nexus
